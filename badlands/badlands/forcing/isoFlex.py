@@ -227,7 +227,7 @@ class isoFlex:
 
         # Compute surface loads
         self.flex.qs = self.rho_w * self.flex.g * numpy.reshape(waterload,(self.ny, self.nx))
-        self.flex.qs += self.rho_s * self.flex.g * (self.Te + numpy.reshape(sedload,(self.ny, self.nx)) )
+        self.flex.qs += self.rho_s * self.flex.g * numpy.reshape(sedload,(self.ny, self.nx)) 
 
         # Compute flexural isostasy with gFlex
         self._compute_flexure()
